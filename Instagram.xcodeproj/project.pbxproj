@@ -13,6 +13,9 @@
 		B26B9B2A1C62F73500E231D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26B9B281C62F73500E231D8 /* Main.storyboard */; };
 		B26B9B2C1C62F73500E231D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26B9B2B1C62F73500E231D8 /* Assets.xcassets */; };
 		B26B9B2F1C62F73500E231D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26B9B2D1C62F73500E231D8 /* LaunchScreen.storyboard */; };
+		B2D4CE371C630475004F5EDA /* PhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4CE361C630475004F5EDA /* PhotoCellView.swift */; };
+		B2D4CE391C63089D004F5EDA /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4CE381C63089D004F5EDA /* PhotoDetailsViewController.swift */; };
+		B2D4CE3D1C63179D004F5EDA /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4CE3C1C63179D004F5EDA /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B26B9B2B1C62F73500E231D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B26B9B2E1C62F73500E231D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B26B9B301C62F73500E231D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D4CE361C630475004F5EDA /* PhotoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCellView.swift; sourceTree = "<group>"; };
+		B2D4CE381C63089D004F5EDA /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		B2D4CE3C1C63179D004F5EDA /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		B4682742BAD17D4F2D75B61E /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		D08505CFDF081D9A34BDA913 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +75,33 @@
 		B26B9B231C62F73500E231D8 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				B26B9B371C63022100E231D8 /* view controllers */,
+				B26B9B361C63021B00E231D8 /* views */,
 				B26B9B241C62F73500E231D8 /* AppDelegate.swift */,
-				B26B9B261C62F73500E231D8 /* PhotosViewController.swift */,
 				B26B9B281C62F73500E231D8 /* Main.storyboard */,
 				B26B9B2B1C62F73500E231D8 /* Assets.xcassets */,
 				B26B9B2D1C62F73500E231D8 /* LaunchScreen.storyboard */,
 				B26B9B301C62F73500E231D8 /* Info.plist */,
+				B2D4CE3C1C63179D004F5EDA /* PhotoModel.swift */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		B26B9B361C63021B00E231D8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B2D4CE361C630475004F5EDA /* PhotoCellView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		B26B9B371C63022100E231D8 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B26B9B261C62F73500E231D8 /* PhotosViewController.swift */,
+				B2D4CE381C63089D004F5EDA /* PhotoDetailsViewController.swift */,
+			);
+			name = "view controllers";
 			sourceTree = "<group>";
 		};
 		DCE9F415E98BD42377AA5DF0 /* Pods */ = {
@@ -210,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D4CE391C63089D004F5EDA /* PhotoDetailsViewController.swift in Sources */,
 				B26B9B271C62F73500E231D8 /* PhotosViewController.swift in Sources */,
+				B2D4CE371C630475004F5EDA /* PhotoCellView.swift in Sources */,
+				B2D4CE3D1C63179D004F5EDA /* PhotoModel.swift in Sources */,
 				B26B9B251C62F73500E231D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

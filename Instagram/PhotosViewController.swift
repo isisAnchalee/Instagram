@@ -9,9 +9,12 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
-
+    
+    var photos: NSDictionary?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let client_id = "e05c462ebd86446ea48a5af73769b602"
         let url = NSURL(string: "https://api.instagram.com/v1/media/popular?client_id=\(client_id)")
@@ -19,8 +22,8 @@ class PhotosViewController: UIViewController {
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
-            delegate: nil,
-            delegateQueue: NSOperationQueue.mainQueue()
+            delegate:nil,
+            delegateQueue:NSOperationQueue.mainQueue()
         )
         
         let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
@@ -28,14 +31,11 @@ class PhotosViewController: UIViewController {
                 if let data = dataOrNil {
                     if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
                         data, options:[]) as? NSDictionary {
-                            NSLog("response: \(responseDictionary)")
-                            self.movies = responseDictionary["results"] as! [NSDictionary]
-                            self.tableView.reloadData()
-                            
+                            self.photos = responseDictionary
+                            //NSLog("response: \(responseDictionary)")
                     }
                 }
-        })
-        
+        });
         task.resume()
     }
 

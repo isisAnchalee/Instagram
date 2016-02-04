@@ -12,11 +12,13 @@ class PhotoDetailsViewController: UIViewController {
 
     @IBOutlet weak var photoDetailImageView: UIImageView!
     
-    var photoUrl: NSURL?
+    var photo: PhotoModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let photoUrl = NSURL(string: photo!.url!)
+        print(photoUrl)
+        photoDetailImageView.setImageWithURL(photoUrl!)
     }
 
     override func didReceiveMemoryWarning() {

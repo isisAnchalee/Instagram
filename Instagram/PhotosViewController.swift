@@ -72,9 +72,17 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vc = segue.destinationViewController as! PhotoDetailsViewController
-        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-        var photo = photoModels[indexPath!.row]
+        let cell = sender as! UITableViewCell
+        let destination = segue.destinationViewController as! PhotoDetailsViewController
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        let photo = photoModels[indexPath!.row]
+        destination.photo = photo
     }
+    
+    func tableView(_tableView: UITableView,
+        didSelectRowAtIndexPath indexPath: NSIndexPath){
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
 }
 
